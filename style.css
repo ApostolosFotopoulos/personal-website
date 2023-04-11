@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Mulish");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* VARIABLES */
+:root {
+  /* FONTS */
+  --FF-HEADINGS: "Poppins", sans-serif;
+  --FF-MAIN: "Mulish", sans-serif;
+  --NAV-FONT-SIZE: 1.2rem;
+
+  /* COLORS */
+  --NAVBAR-BG-COLOR: white;
+  --FONT-COLOR: black;
+  --HOVER-COLOR: blue;
+}
+
+/* GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  font-family: var(--FF-MAIN);
+}
+
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--FONT-COLOR);
+}
+
+a:visited {
+  color: var(--FONT-COLOR);
+}
+
+a:hover {
+  color: var(--HOVER-COLOR);
+}
+
+/* HEADER */
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: var(--NAVBAR-BG-COLOR);
+  font-family: var(--FF-HEADINGS);
+  color: var(--FONT-COLOR);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em;
+  font-size: var(--NAV-FONT-SIZE);
+}
+
+.navbar__h1 {
+  font-size: inherit;
+}
+
+.navbar__ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.navbar__ul-item {
+  padding-right: 2em;
+}
+
+/* MAIN */
+
+main {
+  background-color: rgb(197, 197, 197);
+  height: 1000px;
+  width: auto;
+}
