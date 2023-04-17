@@ -25,6 +25,9 @@ img {
   --NAVBAR-BG-COLOR: white;
   --FONT-COLOR: black;
   --HOVER-COLOR: blue;
+  --HAMBURGER-LINES-COLOR: black;
+  --HAMBURGER-LINES-HOVER-COLOR: blue;
+  --MOBILE-MENU-BG-COLOR: white;
 }
 
 /* GENERAL STYLES */
@@ -77,10 +80,117 @@ a:hover {
   padding-right: 2em;
 }
 
-/* MAIN */
+/* HAMBURGER MENU */
+.hamburger-lines {
+  height: 40px;
+  width: 40px;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
+.hamburger-lines:hover {
+  cursor: pointer;
+}
+
+.hamburger-lines:hover .hamburger-lines__line {
+  background-color: var(--HAMBURGER-LINES-HOVER-COLOR);
+}
+
+.hamburger-lines__line {
+  height: 4px;
+  width: 32px;
+  background-color: var(--HAMBURGER-LINES-COLOR);
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.hamburger-lines__line--top {
+  transform: translateY(-12px);
+}
+
+.hamburger-lines__line--mid {
+  transition: all 0.25s;
+}
+
+.hamburger-lines__line--bot {
+  transform: translateY(12px);
+}
+
+.hamburger-lines__line--top-opened {
+  transform: rotate(45deg) scaleX(1.2);
+}
+
+.hamburger-lines__line--mid-opened {
+  transform: scaleY(0);
+}
+
+.hamburger-lines__line--bot-opened {
+  transform: rotate(-45deg) scaleX(1.2);
+}
+
+.mobile-menu {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--MOBILE-MENU-BG-COLOR);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.mobile-menu--opened {
+  width: 100%;
+}
+
+.mobile-menu__ul {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.mobile-menu__ul-item {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* MAIN */
 main {
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(81, 81, 81);
   height: 1000px;
   width: auto;
+}
+
+/* UTILITY CLASSES */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1em;
+  }
+
+  .navbar__ul {
+    display: none;
+  }
+
+  .navbar__ul-item {
+    display: none;
+  }
+
+  .hamburger-lines {
+    display: flex;
+  }
 }
