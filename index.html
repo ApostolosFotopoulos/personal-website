@@ -8,28 +8,22 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="index.js" defer></script>
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
       (function () {
         // https://dashboard.emailjs.com/admin/account
         emailjs.init("nSgueN9_W3YObB6kY");
       })();
     </script>
-    <script type="text/javascript" defer>
+    <script type="text/javascript">
       window.onload = function () {
         const userInputs = document.querySelectorAll(".contact__form-input");
         document.querySelector(".contact__form").addEventListener("submit", function (event) {
           event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm("service_t3z1cp4", "template_7fmzpem", this).then(
-            function () {
-              userInputs.forEach((input) => {
-                input.value = "";
-              });
-            },
-            function (error) {
-              console.log("FAILED...", error);
-            }
-          );
+          emailjs.sendForm("service_t3z1cp4", "template_7fmzpem", this).then(function () {
+            userInputs.forEach((input) => {
+              input.value = "";
+            });
+          });
         });
       };
     </script>
@@ -146,6 +140,32 @@
               </div>
             </div>
           </li>
+          <li class="projects__list-item projects__list-item--reversed">
+            <a class="projects__list-item-img-link" href="https://car-rental-ten.vercel.app/" rel="noreferrer" target="_blank">
+              <img class="projects__list-item-img" src="img/aa.webp" alt="website" />
+            </a>
+            <div class="projects__list-item-info">
+              <h3 class="projects__list-item-header">CAR RENTAL 🚗</h3>
+              <p class="projects__list-item-par">
+                A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for
+                searching, comparing, and reserving cars.
+              </p>
+              <ul class="projects__list-item-stack">
+                <li class="projects__list-item-tech">SQL</li>
+                <li class="projects__list-item-tech">Java</li>
+              </ul>
+              <div class="projects__list-item-links">
+                <a href="https://github.com/ApostolosFotopoulos" class="projects__list-item-code" rel="noreferrer" target="_blank">
+                  <p>Code</p>
+                  <img src="img/github.svg" alt="Github" class="projects__list-item-github" />
+                </a>
+                <a class="projects__list-item-site" target="_blank" href="https://car-rental-ten.vercel.app/" rel="noreferrer">
+                  <p>Live Demo</p>
+                  <img src="img/arrow-up-right.svg" alt="Website" class="projects__list-item-arrow" />
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
       </section>
       <section class="contact" id="contact">
@@ -155,24 +175,27 @@
         </div>
         <div class="col-container contact__details">
           <form action="#" class="contact__form" method="post">
-            <input type="hidden" name="form-name" value="form 1" />
-            <div class="contact__form-field">
+            <div class="col-container contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
-              <input required="" placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+              <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
             </div>
-            <div class="contact__form-field">
+            <div class="col-container contact__form-field">
               <label class="contact__form-label" for="email">Email</label>
-              <input required="" placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
+              <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
             </div>
-            <div class="contact__form-field">
+            <div class="col-container contact__form-field">
               <label class="contact__form-label" for="message">Message</label>
-              <textarea required="" cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+              <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
             </div>
             <button type="submit" class="contact__button">Submit</button>
           </form>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer">
+        <p class="footer__par">Copyright © 2023. All rights are reserved</p>
+      </div>
+    </footer>
   </body>
 </html>

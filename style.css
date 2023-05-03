@@ -22,9 +22,10 @@ img {
   --NAV-FONT-SIZE: 1.2rem;
   --PAR-FONT-SIZE: 1.2rem;
   --MOBILE-PAR-FONT-SIZE: 1rem;
-  --FONT-COLOR: black;
+  --LINK-FONT-COLOR: black;
   --MAIN-PAR-FONT-COLOR: #333333;
   --ALT-PAR-FONT-COLOR: #666666;
+  --FOOTER-FONT-COLOR: white;
 
   /* BG COLORS */
   --NAVBAR-BG-COLOR: white;
@@ -33,6 +34,7 @@ img {
   --MAIN-BG-COLOR: white;
   --ALT-BG-COLOR: #f9f9f9;
   --INPUT-BG-COLOR: #f0f0f0;
+  --FOOTER-BG-COLOR: #2d2e32;
 
   /* HAMBURGER MENU */
   --HAMBURGER-LINES-COLOR: black;
@@ -47,6 +49,7 @@ img {
 
   /* HEIGHTS */
   --PROJECT-HEIGHT: 30rem;
+  --MOBILE-PROJECT-HEIGHT: 51.5rem;
 }
 
 /* GENERAL STYLES */
@@ -73,11 +76,11 @@ p {
 a:link {
   text-decoration: none;
   cursor: pointer;
-  color: var(--FONT-COLOR);
+  color: var(--LINK-FONT-COLOR);
 }
 
 a:visited {
-  color: var(--FONT-COLOR);
+  color: var(--LINK-FONT-COLOR);
 }
 
 a:hover {
@@ -93,7 +96,6 @@ a:hover {
   background-color: var(--NAVBAR-BG-COLOR);
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
   font-family: var(--FF-HEADINGS);
-  color: var(--FONT-COLOR);
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
@@ -345,10 +347,14 @@ a:hover {
   flex-direction: row;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  gap: 2rem;
+  gap: 1.5rem;
   border-radius: 16px;
   height: var(--PROJECT-HEIGHT);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects__list-item--reversed {
+  flex-direction: row-reverse;
 }
 
 .projects__list-item-img-link {
@@ -356,7 +362,7 @@ a:hover {
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 34rem;
+  width: 32rem;
 }
 
 .projects__list-item-img {
@@ -456,7 +462,8 @@ a:hover {
 .contact__details {
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   background: var(--ALT-BG-COLOR);
-  padding: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 5px;
 }
 
@@ -465,23 +472,29 @@ a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
   width: 100%;
 }
 
+.contact__form-field {
+  gap: 0.2rem;
+}
+
 .contact__form-label {
   width: 100%;
+  align-self: center;
   color: var(--ALT-PAR-FONT-COLOR);
   font-size: var(--PAR-FONT-SIZE);
   letter-spacing: 1px;
   font-weight: 600;
-  margin-bottom: 1rem;
   display: block;
   text-align: left;
 }
 
 .contact__form-input {
+  align-self: center;
   width: 100%;
   color: var(--MAIN-PAR-FONT-COLOR);
   padding: 1rem;
@@ -494,7 +507,6 @@ a:hover {
 
 .contact__button {
   align-self: center;
-  width: 30%;
   font-size: 1.8rem;
   color: var(--MAIN-PAR-FONT-COLOR);
   padding: 1rem 1rem;
@@ -514,10 +526,47 @@ a:hover {
   transform: translateY(-3px);
 }
 
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  margin-top: 8rem;
+  background-color: var(--FOOTER-BG-COLOR);
+}
+
+.footer__par {
+  width: var(--DESKTOP-PAGE-WIDTH);
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--FOOTER-FONT-COLOR);
+}
+
 /* UTILITY CLASSES */
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+@media screen and (max-width: 1025px) {
+  /* PROJECTS */
+  .projects__list-item {
+    flex-direction: column;
+    align-items: center;
+    height: var(--MOBILE-PROJECT-HEIGHT);
+  }
+
+  .projects__list-item-img-link {
+    height: 28rem;
+    width: 100%;
+  }
+
+  .projects__list-item-info {
+    height: 20rem;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -548,6 +597,10 @@ a:hover {
     font-size: 2rem;
   }
 
+  .col-container {
+    width: var(--MOBILE-PAGE-WIDTH);
+  }
+
   /* HERO */
   .hero__header {
     font-size: 2.75rem;
@@ -558,27 +611,25 @@ a:hover {
   }
 
   /* ABOUT */
-  .about__info {
-    width: var(--MOBILE-PAGE-WIDTH);
-  }
-
   .about__info-par {
     text-align: left;
   }
 
-  .about__skills {
-    width: var(--MOBILE-PAGE-WIDTH);
-  }
-
   .about__skills-item {
-    font-size: 0.85rem;
+    font-size: var(--MOBILE-PAR-FONT-SIZE);
   }
 
-  .about__links {
+  /* CONTACT */
+  .contact__form-label {
+    font-size: var(--MOBILE-PAR-FONT-SIZE);
+  }
+
+  .contact__form-input {
+    font-size: var(--MOBILE-PAR-FONT-SIZE);
+  }
+
+  /* FOOTER */
+  .footer__par {
     width: var(--MOBILE-PAGE-WIDTH);
   }
-}
-
-main {
-  height: 500rem;
 }
