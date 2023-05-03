@@ -141,27 +141,27 @@ a:hover {
   transition: transform 0.5s;
 }
 
-.hamburger-lines__line--top {
+.hamburger-lines__line-top {
   transform: translateY(-12px);
 }
 
-.hamburger-lines__line--mid {
+.hamburger-lines__line-mid {
   transition: transform 0.25s;
 }
 
-.hamburger-lines__line--bot {
+.hamburger-lines__line-bot {
   transform: translateY(12px);
 }
 
-.hamburger-lines__line--top-opened {
+.hamburger-lines__line-top--opened {
   transform: rotate(45deg) scaleX(1.2);
 }
 
-.hamburger-lines__line--mid-opened {
+.hamburger-lines__line-mid--opened {
   transform: scaleY(0);
 }
 
-.hamburger-lines__line--bot-opened {
+.hamburger-lines__line-bot--opened {
   transform: rotate(-45deg) scaleX(1.2);
 }
 
