@@ -48,8 +48,8 @@ img {
   --MOBILE-PAGE-WIDTH: 80%;
 
   /* HEIGHTS */
-  --PROJECT-HEIGHT: 30rem;
-  --MOBILE-PROJECT-HEIGHT: 51.5rem;
+  --PROJECT-HEIGHT: 480px;
+  --MOBILE-PROJECT-HEIGHT: 600px;
 }
 
 /* GENERAL STYLES */
@@ -98,7 +98,7 @@ a:hover {
   font-family: var(--FF-HEADINGS);
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem;
+  padding: 24px;
   font-size: var(--NAV-FONT-SIZE);
   z-index: 2;
 }
@@ -114,7 +114,7 @@ a:hover {
 }
 
 .navbar__ul-item {
-  padding-right: 2rem;
+  padding-right: 32px;
 }
 
 /* HAMBURGER MENU */
@@ -201,12 +201,12 @@ a:hover {
   font-size: 32px;
   text-align: center;
   letter-spacing: 3px;
-  margin-top: 8rem;
+  margin-top: 128px;
 }
 
 .heading-divider {
   height: 5px;
-  width: 3rem;
+  width: 48px;
   background: #facf0f;
   border-width: 0px;
   border-radius: 5px;
@@ -217,8 +217,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 24px;
+  margin-top: 24px;
   width: var(--DESKTOP-PAGE-WIDTH);
 }
 
@@ -227,8 +227,8 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 24px;
+  margin-top: 24px;
   width: var(--DESKTOP-PAGE-WIDTH);
 }
 
@@ -250,7 +250,7 @@ a:hover {
   font-size: 64px;
   text-align: center;
   letter-spacing: 3px;
-  margin: 1rem 3rem;
+  margin: 16px 48px;
 }
 
 .hero__par {
@@ -258,14 +258,14 @@ a:hover {
   font-size: 32px;
   text-align: center;
   letter-spacing: 1px;
-  margin: 1rem 3rem;
+  margin: 16px 48px;
 }
 
 .hero__button {
   font-size: 28px;
   color: var(--MAIN-PAR-FONT-COLOR);
-  padding: 1rem 3rem;
-  margin: 2rem;
+  padding: 16px 48px;
+  margin: 32px;
   background: var(--HOVER-COLOR);
   letter-spacing: 1px;
   display: inline-block;
@@ -306,12 +306,12 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  gap: 1rem;
+  gap: 16px;
   list-style: none;
 }
 
 .about__skills-item {
-  padding: 0.75rem 1rem;
+  padding: 12px 16px;
   font-size: var(--PAR-FONT-SIZE);
   background: var(--SKILLS-BG-COLOR);
   border-radius: 5px;
@@ -319,14 +319,14 @@ a:hover {
 }
 
 .about__links {
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .about__links-link {
-  width: 3.5rem;
+  width: 64px;
   display: block;
-  padding: 0.25rem;
-  margin-right: 1.5rem;
+  padding: 8px;
+  margin-right: 24px;
   border-radius: 5px;
 }
 
@@ -350,9 +350,9 @@ a:hover {
 .projects__list-item {
   display: flex;
   flex-direction: row;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  gap: 1.5rem;
+  padding: 24px;
+  margin-bottom: 32px;
+  gap: 24px;
   border-radius: 16px;
   height: var(--PROJECT-HEIGHT);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -367,7 +367,7 @@ a:hover {
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 32rem;
+  width: 332px;
 }
 
 .projects__list-item-img {
@@ -376,8 +376,8 @@ a:hover {
 }
 
 .projects__list-item-img:hover {
-  /*-4rem because of padding of parent element*/
-  transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 4rem));
+  /*-64px because of padding of parent element*/
+  transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 64px));
 }
 
 .projects__list-item-info {
@@ -386,7 +386,7 @@ a:hover {
   background-color: var(--ALT-BG-COLOR);
   align-items: center;
   justify-content: space-evenly;
-  width: 20rem;
+  width: 320px;
 }
 
 .projects__list-item-header {
@@ -401,12 +401,12 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   list-style: none;
 }
 
 .projects__list-item-tech {
-  padding: 0.75rem 1rem;
+  padding: 12px 16px;
   font-size: var(--PAR-FONT-SIZE);
   background: var(--SKILLS-BG-COLOR);
   border-radius: 5px;
@@ -416,7 +416,7 @@ a:hover {
 .projects__list-item-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 16px;
   flex-direction: row;
 }
 
@@ -425,12 +425,12 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  width: 5rem;
+  gap: 8px;
+  width: 80px;
 }
 
 .projects__list-item-github {
-  width: 2rem;
+  width: 32px;
 }
 
 .projects__list-item-code:hover .projects__list-item-github {
@@ -442,12 +442,12 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  width: 9rem;
+  gap: 8px;
+  width: 144px;
 }
 
 .projects__list-item-arrow {
-  width: 2rem;
+  width: 32px;
 }
 
 .projects__list-item-site:hover .projects__list-item-arrow {
@@ -467,8 +467,8 @@ a:hover {
 .contact__details {
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   background: var(--ALT-BG-COLOR);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 32px;
+  padding-right: 32px;
   border-radius: 5px;
 }
 
@@ -478,13 +478,13 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 24px;
+  margin-top: 24px;
   width: 100%;
 }
 
 .contact__form-field {
-  gap: 0.2rem;
+  gap: 0.32px;
 }
 
 .contact__form-label {
@@ -502,7 +502,7 @@ a:hover {
   align-self: center;
   width: 100%;
   color: var(--MAIN-PAR-FONT-COLOR);
-  padding: 1rem;
+  padding: 16px;
   border: 1px solid #ebebeb;
   font-size: var(--PAR-FONT-SIZE);
   background-color: var(--INPUT-BG-COLOR);
@@ -514,8 +514,8 @@ a:hover {
   align-self: center;
   font-size: 28px;
   color: var(--MAIN-PAR-FONT-COLOR);
-  padding: 1rem 1rem;
-  margin: 2rem;
+  padding: 16px 16px;
+  margin: 32px;
   background: var(--HOVER-COLOR);
   letter-spacing: 1px;
   display: inline-block;
@@ -536,9 +536,9 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  height: 160px;
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 128px;
   background-color: var(--FOOTER-BG-COLOR);
 }
 
@@ -563,13 +563,19 @@ a:hover {
     height: var(--MOBILE-PROJECT-HEIGHT);
   }
 
+  .projects__list-item-img:hover {
+    /*-64px because of padding of parent element*/
+    transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 200px));
+  }
+
   .projects__list-item-img-link {
-    height: 28rem;
+    height: 2128px;
     width: 100%;
   }
 
   .projects__list-item-info {
-    height: 20rem;
+    gap: 12px;
+    height: 280px;
     width: 100%;
   }
 }
@@ -582,7 +588,7 @@ a:hover {
 
   /* HEADER */
   .navbar {
-    padding: 1rem;
+    padding: 16px;
   }
 
   .navbar__ul {
