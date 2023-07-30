@@ -49,7 +49,7 @@ img {
 
   /* HEIGHTS */
   --PROJECT-HEIGHT: 480px;
-  --MOBILE-PROJECT-HEIGHT: 600px;
+  --MOBILE-PROJECT-HEIGHT: 680px;
 }
 
 /* GENERAL STYLES */
@@ -220,6 +220,7 @@ a:hover {
   gap: 24px;
   margin-top: 24px;
   width: var(--DESKTOP-PAGE-WIDTH);
+  max-width: 1024px;
 }
 
 .row-container {
@@ -230,6 +231,7 @@ a:hover {
   gap: 24px;
   margin-top: 24px;
   width: var(--DESKTOP-PAGE-WIDTH);
+  max-width: 1024px;
 }
 
 /* HERO */
@@ -354,7 +356,9 @@ a:hover {
   margin-bottom: 32px;
   gap: 24px;
   border-radius: 16px;
+  width: 100%;
   height: var(--PROJECT-HEIGHT);
+  justify-content: space-evenly;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -367,7 +371,11 @@ a:hover {
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 332px;
+  width: 50%;
+}
+
+.projects__list-item-img-link--small {
+  align-self: center;
 }
 
 .projects__list-item-img {
@@ -375,9 +383,22 @@ a:hover {
   transition: transform 10s ease-in-out;
 }
 
+.projects__list-item-img--fast {
+  transform: translateY(0%);
+  transition: transform 3s ease-in-out;
+}
+
+.projects__list-item-img--small {
+  transform: none;
+  transition: none;
+}
+
 .projects__list-item-img:hover {
-  /*-64px because of padding of parent element*/
-  transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 64px));
+  transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 48px));
+}
+
+.projects__list-item-img--small:hover {
+  transform: none;
 }
 
 .projects__list-item-info {
@@ -386,7 +407,7 @@ a:hover {
   background-color: var(--ALT-BG-COLOR);
   align-items: center;
   justify-content: space-evenly;
-  width: 320px;
+  width: 50%;
 }
 
 .projects__list-item-header {
@@ -399,6 +420,7 @@ a:hover {
 
 .projects__list-item-stack {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 16px;
@@ -564,19 +586,27 @@ a:hover {
   }
 
   .projects__list-item-img:hover {
-    /*-64px because of padding of parent element*/
-    transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 200px));
+    transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 176px));
   }
 
   .projects__list-item-img-link {
-    height: 2128px;
+    height: 50%;
     width: 100%;
   }
 
   .projects__list-item-info {
     gap: 12px;
-    height: 280px;
+    height: 50%;
     width: 100%;
+  }
+
+  .projects__list-item-img--small {
+    transform: translateY(0%);
+    transition: transform 3s ease-in-out;
+  }
+
+  .projects__list-item-img--small:hover {
+    transform: translateY(calc(-100% + var(--PROJECT-HEIGHT) - 176px));
   }
 }
 
