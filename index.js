@@ -3,6 +3,7 @@ const hamburgerLineTop = document.querySelector(".hamburger-lines__line-top");
 const hamburgerLineMid = document.querySelector(".hamburger-lines__line-mid");
 const hamburgerLineBot = document.querySelector(".hamburger-lines__line-bot");
 const mobileMenu = document.querySelector(".mobile-menu");
+const projectsButton = document.querySelector(".hero__button");
 const mobileMenuItems = document.querySelectorAll(".mobile-menu__ul-item");
 
 hamburgerLines.addEventListener("click", function () {
@@ -19,4 +20,8 @@ mobileMenuItems.forEach((menuItem) => {
     hamburgerLineBot.classList.toggle("hamburger-lines__line-bot--opened");
     mobileMenu.classList.toggle("mobile-menu--opened");
   });
+});
+
+projectsButton.addEventListener("click", function () {
+  document.getElementById("projects").scrollIntoView();
 });
