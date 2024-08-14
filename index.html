@@ -1,329 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apostolos Fotopoulos</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script src="index.js" defer></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init("nSgueN9_W3YObB6kY");
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        const userInputs = document.querySelectorAll(".contact__form-input");
-        document.querySelector(".contact__form").addEventListener("submit", function (event) {
-          event.preventDefault();
-          emailjs.sendForm("service_t3z1cp4", "template_7fmzpem", this).then(function () {
-            userInputs.forEach((input) => {
-              input.value = "";
-            });
-          });
-        });
-      };
-    </script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <h1 class="navbar__header">Apostolos Fotopoulos</h1>
-        <ul class="navbar__ul">
-          <li class="navbar__ul-item"><a href="#home">Home</a></li>
-          <li class="navbar__ul-item"><a href="#about">About</a></li>
-          <li class="navbar__ul-item"><a href="#projects">Projects</a></li>
-          <li class="navbar__ul-item"><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger-lines">
-          <span class="hamburger-lines__line hamburger-lines__line-top"></span>
-          <span class="hamburger-lines__line hamburger-lines__line-mid"></span>
-          <span class="hamburger-lines__line hamburger-lines__line-bot"></span>
-        </div>
-        <div class="mobile-menu">
-          <ul class="mobile-menu__ul">
-            <li class="mobile-menu__ul-item"><a href="#home">Home</a></li>
-            <li class="mobile-menu__ul-item"><a href="#about">About</a></li>
-            <li class="mobile-menu__ul-item"><a href="#projects">Projects</a></li>
-            <li class="mobile-menu__ul-item"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section id="home" class="hero">
-        <h1 class="hero__header">HEY, I'M APOSTOLOS FOTOPOULOS</h1>
-        <p class="hero__par">A software engineer based in Volos, Greece</p>
-        <button class="hero__button">Projects</button>
-      </section>
-      <section id="about" class="about">
-        <div class="col-container about_info">
-          <h2 class="section-header">ABOUT ME</h2>
-          <hr class="heading-divider" />
-          <p class="about__info-par">
-            In this section you will find more information about me, my education, my current skills mostly in
-            terms of programming and technology and lastly helpful links containing my Github and my CV.
-          </p>
-          <p class="about__info-par">
-            I have a master's degree in computer engineering from the University of Thessaly in Greece. I have
-            been working as a software engineer for 2 years, taking part in a variety of projects with
-            different technologies. That includes web applications, games and apps for both desktop and
-            mobile, embedded systems programming and more. As of 2023 my main focus is in web development,
-            mainly with the PERN (PostgreSQL, Express, React, Node.js) stack.
-          </p>
-        </div>
-        <div class="col-container about__skills">
-          <h3 class="about__skills-header">SKILLS</h3>
-          <ul class="about__skills-list">
-            <li class="about__skills-item">Html</li>
-            <li class="about__skills-item">CSS</li>
-            <li class="about__skills-item">Tailwind CSS</li>
-            <li class="about__skills-item">Javascript</li>
-            <li class="about__skills-item">Typescript</li>
-            <li class="about__skills-item">React</li>
-            <li class="about__skills-item">Express</li>
-            <li class="about__skills-item">Electron</li>
-            <li class="about__skills-item">Node.js</li>
-            <li class="about__skills-item">Git</li>
-            <li class="about__skills-item">Github</li>
-            <li class="about__skills-item">MySQL</li>
-            <li class="about__skills-item">PostgreSQL</li>
-            <li class="about__skills-item">Neo4j</li>
-            <li class="about__skills-item">SQL</li>
-            <li class="about__skills-item">Cypher</li>
-            <li class="about__skills-item">Unity</li>
-            <li class="about__skills-item">C#</li>
-            <li class="about__skills-item">Java</li>
-            <li class="about__skills-item">C</li>
-            <li class="about__skills-item">C++</li>
-            <li class="about__skills-item">Matlab</li>
-          </ul>
-        </div>
-        <div class="row-container about__links">
-          <a
-            href="https://github.com/ApostolosFotopoulos"
-            class="about__links-link"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img src="img/github.svg" alt="Github" class="about__links-link-img" />
-          </a>
-          <a
-            href="https://linkedin.com/in/apfotopoulos"
-            class="about__links-link"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img src="img/linkedin.svg" alt="Linkedin" class="about__links-link-img" />
-          </a>
-          <a href="docs/CV-ApostolosFotopoulos.pdf" class="about__links-link" rel="help" download>
-            <img src="img/cv.svg" alt="CV" class="about__links-link-img" />
-          </a>
-        </div>
-      </section>
-      <section id="projects" class="projects">
-        <div class="col-container projects__info">
-          <h2 class="section-header">PROJECTS</h2>
-          <hr class="heading-divider" />
-        </div>
-        <ul class="col-container projects__list">
-          <li class="projects__list-item">
-            <a
-              class="projects__list-item-img-link projects__list-item-img-link--small"
-              href="https://www.cpwatcher.org/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                class="projects__list-item-img projects__list-item-img--small"
-                src="img/cpwatcher.png"
-                alt="website"
-              />
-            </a>
-            <div class="projects__list-item-info">
-              <h3 class="projects__list-item-header">CPWATCHER ⌚</h3>
-              <p class="projects__list-item-par">
-                CPwatcher was created in order to be able to measure how healthy a person walks. This is done
-                by connecting a sensor to a web app that lets the user create an account, add patients,
-                collect data for each patient and track their improvement over time.
-              </p>
-              <ul class="projects__list-item-stack">
-                <li class="projects__list-item-tech">Arduino</li>
-                <li class="projects__list-item-tech">PostgreSQL</li>
-                <li class="projects__list-item-tech">Express</li>
-                <li class="projects__list-item-tech">React</li>
-                <li class="projects__list-item-tech">Redux</li>
-                <li class="projects__list-item-tech">Node.js</li>
-              </ul>
-              <div class="projects__list-item-links">
-                <a
-                  href="https://github.com/ApostolosFotopoulos/nicla-sense-edge-impulse"
-                  class="projects__list-item-code"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <p>Code</p>
-                  <img src="img/github.svg" alt="Github" class="projects__list-item-github" />
-                </a>
-                <a
-                  class="projects__list-item-site"
-                  target="_blank"
-                  href="https://www.cpwatcher.org/"
-                  rel="noreferrer"
-                >
-                  <p>Live Demo</p>
-                  <img src="img/arrow-up-right.svg" alt="Website" class="projects__list-item-arrow" />
-                </a>
-              </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apostolos Fotopoulos</title>
+        <link rel="stylesheet" href="style.css" />
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        ></script>
+        <script src="index.js" defer></script>
+        <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init("nSgueN9_W3YObB6kY");
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                const userInputs = document.querySelectorAll(".contact__form-input");
+                document.querySelector(".contact__form").addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    emailjs.sendForm("service_t3z1cp4", "template_7fmzpem", this).then(function () {
+                        userInputs.forEach((input) => {
+                            input.value = "";
+                        });
+                    });
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1 class="navbar__header">Apostolos Fotopoulos</h1>
+                <ul class="navbar__ul">
+                    <li class="navbar__ul-item"><a href="#home">Home</a></li>
+                    <li class="navbar__ul-item"><a href="#about">About</a></li>
+                    <li class="navbar__ul-item"><a href="#projects">Projects</a></li>
+                    <li class="navbar__ul-item"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger-lines">
+                    <span class="hamburger-lines__line hamburger-lines__line-top"></span>
+                    <span class="hamburger-lines__line hamburger-lines__line-mid"></span>
+                    <span class="hamburger-lines__line hamburger-lines__line-bot"></span>
+                </div>
+                <div class="mobile-menu">
+                    <ul class="mobile-menu__ul">
+                        <li class="mobile-menu__ul-item"><a href="#home">Home</a></li>
+                        <li class="mobile-menu__ul-item"><a href="#about">About</a></li>
+                        <li class="mobile-menu__ul-item"><a href="#projects">Projects</a></li>
+                        <li class="mobile-menu__ul-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="home" class="hero">
+                <h1 class="hero__header">HEY, I'M APOSTOLOS FOTOPOULOS</h1>
+                <p class="hero__par">A software engineer based in Volos, Greece</p>
+                <button class="hero__button">Projects</button>
+            </section>
+            <section id="about" class="about">
+                <div class="col-container about_info">
+                    <h2 class="section-header">ABOUT ME</h2>
+                    <hr class="heading-divider" />
+                    <p class="about__info-par">
+                        In this section you will find more information about me, my education, my current
+                        skills mostly in terms of programming and technology and lastly helpful links
+                        containing my Github and my CV.
+                    </p>
+                    <p class="about__info-par">
+                        I have a master's degree in computer engineering from the University of Thessaly in
+                        Greece. I have been working as a software engineer for 2 years, taking part in a
+                        variety of projects with different technologies. That includes web applications, games
+                        and apps for both desktop and mobile, embedded systems programming and more. As of now
+                        my main focus is in web development, mainly with the MERN (MongoDB, Express, React,
+                        Node.js) stack.
+                    </p>
+                </div>
+                <div class="col-container about__skills">
+                    <h3 class="about__skills-header">SKILLS</h3>
+                    <ul class="about__skills-list">
+                        <li class="about__skills-item">Html</li>
+                        <li class="about__skills-item">CSS</li>
+                        <li class="about__skills-item">Tailwind CSS</li>
+                        <li class="about__skills-item">Javascript</li>
+                        <li class="about__skills-item">Typescript</li>
+                        <li class="about__skills-item">React</li>
+                        <li class="about__skills-item">Next.js</li>
+                        <li class="about__skills-item">Express</li>
+                        <li class="about__skills-item">Electron</li>
+                        <li class="about__skills-item">Node.js</li>
+                        <li class="about__skills-item">Git</li>
+                        <li class="about__skills-item">Github</li>
+                        <li class="about__skills-item">AWS</li>
+                        <li class="about__skills-item">MySQL</li>
+                        <li class="about__skills-item">PostgreSQL</li>
+                        <li class="about__skills-item">MongoDB</li>
+                        <li class="about__skills-item">Neo4j</li>
+                        <li class="about__skills-item">SQL</li>
+                        <li class="about__skills-item">Cypher</li>
+                        <li class="about__skills-item">Unity</li>
+                        <li class="about__skills-item">C#</li>
+                        <li class="about__skills-item">Java</li>
+                        <li class="about__skills-item">C</li>
+                        <li class="about__skills-item">C++</li>
+                        <li class="about__skills-item">Matlab</li>
+                    </ul>
+                </div>
+                <div class="row-container about__links">
+                    <a
+                        href="https://github.com/ApostolosFotopoulos"
+                        class="about__links-link"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <img src="img/github.svg" alt="Github" class="about__links-link-img" />
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/apfotopoulos"
+                        class="about__links-link"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <img src="img/linkedin.svg" alt="Linkedin" class="about__links-link-img" />
+                    </a>
+                    <a href="docs/CV-ApostolosFotopoulos.pdf" class="about__links-link" rel="help" download>
+                        <img src="img/cv.svg" alt="CV" class="about__links-link-img" />
+                    </a>
+                </div>
+            </section>
+            <section id="projects" class="projects">
+                <div class="col-container projects__info">
+                    <h2 class="section-header">PROJECTS</h2>
+                    <hr class="heading-divider" />
+                </div>
+                <ul class="col-container projects__list">
+                    <li class="projects__list-item">
+                        <a
+                            class="projects__list-item-img-link projects__list-item-img-link--small"
+                            href="https://www.cpwatcher.org/"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <img
+                                class="projects__list-item-img projects__list-item-img--small"
+                                src="img/cpwatcher.png"
+                                alt="website"
+                            />
+                        </a>
+                        <div class="projects__list-item-info">
+                            <h3 class="projects__list-item-header">CPWATCHER ⌚</h3>
+                            <p class="projects__list-item-par">
+                                CPwatcher was created in order to be able to measure how healthy a person
+                                walks. This is done by connecting a sensor to a web app that lets the user
+                                create an account, add patients, collect data for each patient and track their
+                                improvement over time.
+                            </p>
+                            <ul class="projects__list-item-stack">
+                                <li class="projects__list-item-tech">Arduino</li>
+                                <li class="projects__list-item-tech">PostgreSQL</li>
+                                <li class="projects__list-item-tech">Express</li>
+                                <li class="projects__list-item-tech">React</li>
+                                <li class="projects__list-item-tech">Redux</li>
+                                <li class="projects__list-item-tech">Node.js</li>
+                            </ul>
+                            <div class="projects__list-item-links">
+                                <a
+                                    href="https://github.com/ApostolosFotopoulos/nicla-sense-edge-impulse"
+                                    class="projects__list-item-code"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
+                                    <p>Code</p>
+                                    <img
+                                        src="img/github.svg"
+                                        alt="Github"
+                                        class="projects__list-item-github"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projects__list-item projects__list-item--reversed">
+                        <a
+                            class="projects__list-item-img-link"
+                            href="https://apfotopoulos-gym-website.netlify.app/"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <img class="projects__list-item-img" src="img/gym-website.png" alt="website" />
+                        </a>
+                        <div class="projects__list-item-info">
+                            <h3 class="projects__list-item-header">GYMATE 🏋️</h3>
+                            <p class="projects__list-item-par">
+                                Gymate is a website built to connect gym enthusiasts with their local gym. It
+                                contains lots of pages, including a gallery, a blog, a pricing section and
+                                more.
+                            </p>
+                            <ul class="projects__list-item-stack">
+                                <li class="projects__list-item-tech">React</li>
+                                <li class="projects__list-item-tech">Tailwind CSS</li>
+                            </ul>
+                            <div class="projects__list-item-links">
+                                <a
+                                    href="https://github.com/ApostolosFotopoulos/gym-website"
+                                    class="projects__list-item-code"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
+                                    <p>Code</p>
+                                    <img
+                                        src="img/github.svg"
+                                        alt="Github"
+                                        class="projects__list-item-github"
+                                    />
+                                </a>
+                                <a
+                                    class="projects__list-item-site"
+                                    target="_blank"
+                                    href="https://apfotopoulos-gym-website.netlify.app/"
+                                    rel="noreferrer"
+                                >
+                                    <p>Live Demo</p>
+                                    <img
+                                        src="img/arrow-up-right.svg"
+                                        alt="Website"
+                                        class="projects__list-item-arrow"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projects__list-item">
+                        <a
+                            class="projects__list-item-img-link"
+                            href="https://www.dropbox.com/s/789dzmgaz2uu3pr/Mythology%20Quiz.apk?dl=0"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <img
+                                class="projects__list-item-img projects__list-item-img--fast"
+                                src="img/mythology-quiz.png"
+                                alt="website"
+                            />
+                        </a>
+                        <div class="projects__list-item-info">
+                            <h3 class="projects__list-item-header">MYTHOLOGY QUIZ 🐉</h3>
+                            <p class="projects__list-item-par">
+                                Mythology Quiz is a quiz game that contains a set of questions about the
+                                mythology of each country that took place in the project. Each country has its
+                                own level with questions related to its mythology, while there is also a final
+                                level containing questions from all countries.
+                            </p>
+                            <ul class="projects__list-item-stack">
+                                <li class="projects__list-item-tech">Unity</li>
+                                <li class="projects__list-item-tech">C#</li>
+                            </ul>
+                            <div class="projects__list-item-links">
+                                <a
+                                    href="https://github.com/ApostolosFotopoulos/mythology-quiz"
+                                    class="projects__list-item-code"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
+                                    <p>Code</p>
+                                    <img
+                                        src="img/github.svg"
+                                        alt="Github"
+                                        class="projects__list-item-github"
+                                    />
+                                </a>
+                                <a
+                                    class="projects__list-item-site"
+                                    target="_blank"
+                                    href="https://www.dropbox.com/s/789dzmgaz2uu3pr/Mythology%20Quiz.apk?dl=0"
+                                    rel="noreferrer"
+                                >
+                                    <p>Apk</p>
+                                    <img
+                                        src="img/arrow-up-right.svg"
+                                        alt="Website"
+                                        class="projects__list-item-arrow"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="contact" id="contact">
+                <div class="col-container contact__info">
+                    <h2 class="section-header">CONTACT</h2>
+                    <hr class="heading-divider" />
+                </div>
+                <div class="col-container contact__details">
+                    <form action="#" class="contact__form" method="post">
+                        <div class="col-container contact__form-field">
+                            <label class="contact__form-label" for="name">Name</label>
+                            <input
+                                required
+                                placeholder="Enter Your Name"
+                                type="text"
+                                class="contact__form-input"
+                                name="name"
+                                id="name"
+                                autocomplete="on"
+                            />
+                        </div>
+                        <div class="col-container contact__form-field">
+                            <label class="contact__form-label" for="email">Email</label>
+                            <input
+                                required
+                                placeholder="Enter Your Email"
+                                type="email"
+                                class="contact__form-input"
+                                name="email"
+                                id="email"
+                                autocomplete="on"
+                            />
+                        </div>
+                        <div class="col-container contact__form-field">
+                            <label class="contact__form-label" for="message">Message</label>
+                            <textarea
+                                required
+                                cols="30"
+                                rows="10"
+                                class="contact__form-input"
+                                placeholder="Enter Your Message"
+                                name="message"
+                                id="message"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="contact__button">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <p class="footer__par">Copyright © 2024. All rights are reserved</p>
             </div>
-          </li>
-          <li class="projects__list-item projects__list-item--reversed">
-            <a
-              class="projects__list-item-img-link"
-              href="https://apfotopoulos-gym-website.netlify.app/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img class="projects__list-item-img" src="img/gym-website.png" alt="website" />
-            </a>
-            <div class="projects__list-item-info">
-              <h3 class="projects__list-item-header">GYMATE 🏋️</h3>
-              <p class="projects__list-item-par">
-                Gymate is a website built to connect gym enthusiasts with their local gym. It contains lots of
-                pages, including a gallery, a blog, a pricing section and more.
-              </p>
-              <ul class="projects__list-item-stack">
-                <li class="projects__list-item-tech">React</li>
-                <li class="projects__list-item-tech">Tailwind CSS</li>
-              </ul>
-              <div class="projects__list-item-links">
-                <a
-                  href="https://github.com/ApostolosFotopoulos/gym-website"
-                  class="projects__list-item-code"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <p>Code</p>
-                  <img src="img/github.svg" alt="Github" class="projects__list-item-github" />
-                </a>
-                <a
-                  class="projects__list-item-site"
-                  target="_blank"
-                  href="https://apfotopoulos-gym-website.netlify.app/"
-                  rel="noreferrer"
-                >
-                  <p>Live Demo</p>
-                  <img src="img/arrow-up-right.svg" alt="Website" class="projects__list-item-arrow" />
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__list-item">
-            <a
-              class="projects__list-item-img-link"
-              href="https://www.dropbox.com/s/789dzmgaz2uu3pr/Mythology%20Quiz.apk?dl=0"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                class="projects__list-item-img projects__list-item-img--fast"
-                src="img/mythology-quiz.png"
-                alt="website"
-              />
-            </a>
-            <div class="projects__list-item-info">
-              <h3 class="projects__list-item-header">MYTHOLOGY QUIZ 🐉</h3>
-              <p class="projects__list-item-par">
-                Mythology Quiz is a quiz game that contains a set of questions about the mythology of each
-                country that took place in the project. Each country has its own level with questions related
-                to its mythology, while there is also a final level containing questions from all countries.
-              </p>
-              <ul class="projects__list-item-stack">
-                <li class="projects__list-item-tech">Unity</li>
-                <li class="projects__list-item-tech">C#</li>
-              </ul>
-              <div class="projects__list-item-links">
-                <a
-                  href="https://github.com/ApostolosFotopoulos/mythology-quiz"
-                  class="projects__list-item-code"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <p>Code</p>
-                  <img src="img/github.svg" alt="Github" class="projects__list-item-github" />
-                </a>
-                <a
-                  class="projects__list-item-site"
-                  target="_blank"
-                  href="https://www.dropbox.com/s/789dzmgaz2uu3pr/Mythology%20Quiz.apk?dl=0"
-                  rel="noreferrer"
-                >
-                  <p>Apk</p>
-                  <img src="img/arrow-up-right.svg" alt="Website" class="projects__list-item-arrow" />
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="contact" id="contact">
-        <div class="col-container contact__info">
-          <h2 class="section-header">CONTACT</h2>
-          <hr class="heading-divider" />
-        </div>
-        <div class="col-container contact__details">
-          <form action="#" class="contact__form" method="post">
-            <div class="col-container contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-                autocomplete="on"
-              />
-            </div>
-            <div class="col-container contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="email"
-                class="contact__form-input"
-                name="email"
-                id="email"
-                autocomplete="on"
-              />
-            </div>
-            <div class="col-container contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="contact__button">Submit</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer">
-        <p class="footer__par">Copyright © 2023. All rights are reserved</p>
-      </div>
-    </footer>
-  </body>
+        </footer>
+    </body>
 </html>
